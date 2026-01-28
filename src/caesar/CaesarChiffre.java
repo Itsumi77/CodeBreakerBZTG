@@ -14,9 +14,9 @@ public class CaesarChiffre {
     public CaesarPanel caesarPanel;
     public Botschaft botschaft;
 
-    CaesarChiffre(ProjectWindow fenster) {
+    CaesarChiffre(ProjectWindow fenster, Botschaft botschaft) {
         this.fenster = fenster;
-        this.botschaft = new Botschaft();
+        this.botschaft = botschaft;
         this.botschaft.SetVerschluesselteBotschaft(CaesarVerschluesselung(RadnomCaesarChiffre(),this.botschaft.klartextCharArray));
 
         this.caesarPanel = new CaesarPanel(this);
@@ -24,13 +24,6 @@ public class CaesarChiffre {
         this.fenster.SwapCenterPanel(this.caesarPanel);
 
         this.caesarPanel.middleBox.setText(new String(String.valueOf(this.caesarPanel.aktuelleDechiffrierung)));
-
-    }
-
-    CaesarChiffre(ProjectWindow fenster, Botschaft botschaft) {
-        this.fenster = fenster;
-        this.caesarPanel = new CaesarPanel(this);
-        this.fenster.SwapCenterPanel(this.caesarPanel);
     }
 
     public int RadnomCaesarChiffre(){

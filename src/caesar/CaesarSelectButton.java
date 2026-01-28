@@ -1,5 +1,6 @@
 package caesar;
 
+import Botschaft.Botschaft;
 import window.ProjectWindow;
 
 import javax.swing.*;
@@ -21,7 +22,7 @@ public class CaesarSelectButton implements ActionListener {
 
     public void actionPerformed(ActionEvent e) {
         if(e.getSource() == button){
-            new CaesarChiffre(this.fenster);
+            new CaesarChiffre(this.fenster, new Botschaft());
 
         }
     }
