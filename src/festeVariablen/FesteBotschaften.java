@@ -12,7 +12,7 @@ public enum FesteBotschaften {
             "24 Tage sind auf dem Adventskalender",
             "Roehrenfehrnseher dass waren noch die guten alten Zeiten",
             "Fanfiction ist ein komplett legitimes Kunstmedium",
-            "Das word Admiral kommt aus dem arabischen und bedeutet so viel wie eine Person die über eine Anzahl anderer herrscht"});
+            "Das word Admiral kommt aus dem arabischen und bedeutet so viel wie eine Person die ueber eine Anzahl anderer herrscht"});
 
 
 

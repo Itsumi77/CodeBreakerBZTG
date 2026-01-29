@@ -31,20 +31,20 @@ public class CaesarPanel extends JPanel {
 
         this.eingabeTextfeld = new JTextArea();
         this.add(this.eingabeTextfeld);
-        this.eingabeTextfeld.setBounds(500,50,600,50);
+        this.eingabeTextfeld.setBounds(500,50,600,60);
         this.eingabeTextfeld.setLineWrap(true);
         this.eingabeTextfeld.setFont(f);
 
         this.upperBox = new JTextArea();
         this.add(upperBox);
-        this.upperBox.setBounds(500,150,600,50);
+        this.upperBox.setBounds(500,150,600,60);
         this.upperBox.setLineWrap(true);
         this.upperBox.setFont(f);
         this.upperBox.setEditable(false);
 
         this.lowerBox = new JTextArea();
         this.add(lowerBox);
-        this.lowerBox.setBounds(500,500,600,50);
+        this.lowerBox.setBounds(500,500,600,60);
         this.lowerBox.setLineWrap(true);
         this.lowerBox.setFont(f);
         this.lowerBox.setEditable(false);
