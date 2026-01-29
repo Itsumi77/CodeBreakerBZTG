@@ -6,7 +6,7 @@ import java.awt.event.ActionListener;
 
 public class CaesarChiffrierButton implements ActionListener {
 
-    private JButton button;
+    private JButton chiffrierButton;
     private CaesarPanel caesarPanel;
     private boolean isIncreaseButton;
 
@@ -14,20 +14,20 @@ public class CaesarChiffrierButton implements ActionListener {
         this.caesarPanel = panel;
         this.isIncreaseButton = isIncreaseButton;
         if(this.isIncreaseButton) {
-            this.button = new JButton("+1");
-            this.caesarPanel.add(this.button);
-            this.button.setBounds(850, 300, 50, 50);
-            this.button.addActionListener(this);
+            this.chiffrierButton = new JButton("+1");
+            this.caesarPanel.add(this.chiffrierButton);
+            this.chiffrierButton.setBounds(850, 300, 50, 50);
+            this.chiffrierButton.addActionListener(this);
         }else {
-            this.button = new JButton("-1");
-            this.caesarPanel.add(this.button);
-            this.button.setBounds(700, 300, 50, 50);
-            this.button.addActionListener(this);
+            this.chiffrierButton = new JButton("-1");
+            this.caesarPanel.add(this.chiffrierButton);
+            this.chiffrierButton.setBounds(700, 300, 50, 50);
+            this.chiffrierButton.addActionListener(this);
         }
     }
 
     public void actionPerformed(ActionEvent e) {
-        if(e.getSource() == button){
+        if(e.getSource() == chiffrierButton){
             if(this.isIncreaseButton) {
                 if(this.caesarPanel.aktuelleDechiffrierung < 35) {
                         this.caesarPanel.aktuelleDechiffrierung ++;
@@ -42,7 +42,7 @@ public class CaesarChiffrierButton implements ActionListener {
                 }
 
             }
-            this.caesarPanel.SetLowerText(this.caesarPanel.chiffre.CaesarVerschluesselung(this.caesarPanel.aktuelleDechiffrierung, this.caesarPanel.chiffre.botschaft.verschluesseltesCharArray));
+            this.caesarPanel.SetLowerText(this.caesarPanel.chiffre.CaesarVerschluesselung(this.caesarPanel.aktuelleDechiffrierung, this.caesarPanel.chiffre.StringtoCharArray(this.caesarPanel.nachrichtOben)));
             this.caesarPanel.middleBox.setText(String.valueOf(this.caesarPanel.aktuelleDechiffrierung));
 
         }

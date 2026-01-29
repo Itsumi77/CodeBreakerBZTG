@@ -8,22 +8,25 @@ import java.awt.*;
 public class ProjectWindow {
 
     public JFrame frame;
-    public JPanel topPanel;
     public JPanel centerPanel;
     private JPanel rightBorder;
     private JPanel leftBorder;
     private Color sidePanelColour = Color.lightGray;
 
+
     public StartCenterDisplayBox startScreen;
+    public TopDisplayBox topPanel;
 
     public
 
     ProjectWindow() {
         this.frame = new ProjectFrame();
-        this.topPanel = new TopDisplayBox();
+        this.topPanel = new TopDisplayBox(this);
+
         this.frame.add(this.topPanel, BorderLayout.NORTH);
         this.startScreen = new StartCenterDisplayBox(this);
         this.centerPanel = this.startScreen;
+
         this.startScreen.InitializeButton();
         this.frame.add(this.centerPanel, BorderLayout.CENTER);
         InitializeBorderPanels();

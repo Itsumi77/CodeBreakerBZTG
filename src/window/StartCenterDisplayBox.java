@@ -2,7 +2,7 @@ package window;
 
 import javax.swing.*;
 import java.awt.*;
-import caesar.CaesarSelectButton;
+
 import festeVariablen.ScreenResolutions;
 
 public class StartCenterDisplayBox extends JPanel {
@@ -18,7 +18,7 @@ public class StartCenterDisplayBox extends JPanel {
 
     }
     public void InitializeButton(){
-        new CaesarSelectButton(this.window);
+        new StartScreenSelectButton(this.window);
     }
 
 }

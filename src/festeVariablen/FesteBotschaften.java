@@ -6,10 +6,13 @@ import java.util.Random;
 
 public enum FesteBotschaften {
 
-    TAGDEROFFENENTÜR (new String[]{"Heute ist Tag der offenen Tuer am BZTG",
+    TAGDEROFFENENTÜR (new String[]{
+            "Heute ist Tag der offenen Tuer am BZTG",
             "Eine sehr wichtige geheime Botschaft",
             "24 Tage sind auf dem Adventskalender",
-            "Roehrenfehrnseher dass waren noch die guten alten Zeiten"});
+            "Roehrenfehrnseher dass waren noch die guten alten Zeiten",
+            "Fanfiction ist ein komplett legitimes Kunstmedium",
+            "Das word Admiral kommt aus dem arabischen und bedeutet so viel wie eine Person die über eine Anzahl anderer herrscht"});
 
 
 

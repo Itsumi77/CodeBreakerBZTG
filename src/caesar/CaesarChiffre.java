@@ -1,28 +1,21 @@
 package caesar;
 
-import Botschaft.Botschaft;
 import festeVariablen.CaesarSchablone;
 import window.ProjectWindow;
 
-import javax.swing.*;
-import java.awt.*;
 import java.util.Random;
 
 public class CaesarChiffre {
 
     public ProjectWindow fenster;
     public CaesarPanel caesarPanel;
-    public Botschaft botschaft;
+    
 
-    CaesarChiffre(ProjectWindow fenster, Botschaft botschaft) {
+    public CaesarChiffre(ProjectWindow fenster) {
+
         this.fenster = fenster;
-        this.botschaft = botschaft;
-        this.botschaft.SetVerschluesselteBotschaft(CaesarVerschluesselung(RadnomCaesarChiffre(),this.botschaft.klartextCharArray));
-
         this.caesarPanel = new CaesarPanel(this);
-        this.caesarPanel.SetUpperText(this.botschaft.verschluesselterString);
         this.fenster.SwapCenterPanel(this.caesarPanel);
-
         this.caesarPanel.middleBox.setText(new String(String.valueOf(this.caesarPanel.aktuelleDechiffrierung)));
     }
 
@@ -45,5 +38,15 @@ public class CaesarChiffre {
         return verschlüsselteBotschaft;
     }
 
+    public char[] StringtoCharArray(String botschaft) {
+        char[] charArray = botschaft.toCharArray();
+        return  charArray;
+        //String der Botschaft in ein Array aus chars konvertieren
+    }
+    public String CharArrayToString(char[] botschaft) {
+        String stringBotschaft = new String(botschaft);
+        return stringBotschaft;
+        //Chararray to string convertieren
+    }
 
 }

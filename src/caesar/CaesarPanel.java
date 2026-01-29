@@ -2,7 +2,6 @@ package caesar;
 
 import festeVariablen.ScreenResolutions;
 
-import javax.print.attribute.standard.OutputDeviceAssigned;
 import javax.swing.*;
 import java.awt.*;
 
@@ -16,6 +15,9 @@ public class CaesarPanel extends JPanel {
     public CaesarChiffrierButton increaseButton;
     public CaesarChiffrierButton decreaseButton;
 
+    public JTextArea eingabeTextfeld;
+
+    public String nachrichtOben;
 
     public int aktuelleDechiffrierung;
     public char[] dechiffrierteBotschaft;
@@ -26,6 +28,12 @@ public class CaesarPanel extends JPanel {
         this.setLayout(null);
         this.setPreferredSize(ScreenResolutions.CENTERPANEL.resolution);
         this.setFocusable(true); //makes it so, that keyboard inputs work
+
+        this.eingabeTextfeld = new JTextArea();
+        this.add(this.eingabeTextfeld);
+        this.eingabeTextfeld.setBounds(500,50,600,50);
+        this.eingabeTextfeld.setLineWrap(true);
+        this.eingabeTextfeld.setFont(f);
 
         this.upperBox = new JTextArea();
         this.add(upperBox);
@@ -50,15 +58,22 @@ public class CaesarPanel extends JPanel {
 
         this.increaseButton = new CaesarChiffrierButton(this,true);
         this.decreaseButton = new CaesarChiffrierButton(this,false);
+        new CaesarSelectButton(this);
+        InitializeEinstellButton();
 
     }
     public void SetUpperText(String botschaft) {
         this.upperBox.setText(botschaft);
     }
-
+    public void InitializeEinstellButton() {
+        new EigeneBotschaftEinstellButton(this);
+    }
     public void SetLowerText(char[] botschaft) {
         this.lowerBox.setText(new String(botschaft));
     }
 
+    public void SetNewBotschaft(String botschaft) {
 
+
+    }
 }
